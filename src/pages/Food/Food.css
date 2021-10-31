@@ -1,0 +1,10 @@
+.img-style{
+    height: 400px;
+    width: 100%;
+   border-radius: 10px;
+}
+.card{
+    height:620px;
+    border: 1px solid goldenrod;
+    border-radius: 10px;
+}
