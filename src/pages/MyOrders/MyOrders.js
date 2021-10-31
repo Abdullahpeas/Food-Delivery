@@ -40,14 +40,15 @@ const MyOrders = () => {
             <h2>My order : {orders.length}</h2>
 
             {
-                orders.map(order => <div>
-                    <h3>{order?.Item}</h3>
-                    <h3>{order?.price}</h3>
-                    <h3>{order?.desc}</h3>
-                    <p>{order?.email}</p>
-                    <p>{order?.username}</p>
+                orders.map(order => <div className="card h-75 m-3">
+                    <h3>Item:{order?.Item}</h3>
+                    <h3>Price:{order?.price}</h3>
+                    <p>Desc:{order?.desc}</p>
+                    <p>Email:{order?.email}</p>
+                    <p>Username:{order?.username}</p>
+                    <p>Address:{order?.address}</p>
 
-                    <button onClick={() => handleDelete(order._id)} className="btn btn-danger m-2">Cancel Order</button>
+                    <button onClick={() => handleDelete(order._id)} className="btn btn-danger m-2 mx-auto w-10">Cancel Order</button>
                 </div>)
             }
         </div>

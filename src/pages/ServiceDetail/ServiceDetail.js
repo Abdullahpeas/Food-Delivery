@@ -47,7 +47,7 @@ const ServiceDetail = () => {
                 }
 
             })
-
+        console.log(data)
     }
 
     return (
@@ -58,18 +58,20 @@ const ServiceDetail = () => {
 
 
 
-                {user?.email && <input defaultValue={user?.email} {...register("email", { required: true })} />}
+                {user?.email && <input className="d-flex m-3 mx-auto" defaultValue={user?.email} {...register("email", { required: true })} />}
 
 
-                {services?.name && <input defaultValue={services?.name} {...register("Item")} />}
+                {services?.name && <input className="d-flex m-3 mx-auto" defaultValue={services?.name} {...register("Item")} />}
 
-                {services?.desc && <input defaultValue={services?.desc} {...register("desc")} />}
+                {services?.desc && <input className="d-flex m-3 mx-auto p-3 " defaultValue={services?.desc} {...register("desc")} />}
 
-                {services?.price && <input placeholder="price" defaultValue={services?.price} {...register("price")} />}
+                {services?.price && <input className="d-flex m-3 mx-auto" placeholder="price" defaultValue={services?.price} {...register("price")} />}
 
-                {user?.displayName && <input placeholder="username" defaultValue={user?.displayName}{...register("username")} />}
+                {user?.displayName && <input className="d-flex m-3 mx-auto" placeholder="username" defaultValue={user?.displayName}{...register("username")} />}
 
-                <input type="submit" />
+                <input className="d-flex m-3 mx-auto" placeholder="addrress" {...register("address")} />
+
+                <input className="btn btn-success" type="submit" />
 
             </form>
 

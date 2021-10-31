@@ -34,15 +34,16 @@ const ManageOrders = () => {
             <h2>All Orders: {manageOrders.length}</h2>
             <hr className="w-25 mx-auto text-success pt-1" />
             {
-                manageOrders.map(Orders => <div>
+                manageOrders.map(Orders => <div className="card h-75 m-3">
 
-                    <h3>{Orders?.Item}</h3>
-                    <h3>{Orders?.price}</h3>
-                    <h3>{Orders?.desc}</h3>
-                    <h5>{Orders?.email}</h5>
-                    <h5>{Orders?.username}</h5>
+                    <h3>Item:{Orders?.Item}</h3>
+                    <h3>Price:{Orders?.price}</h3>
+                    <p>Desc:{Orders?.desc}</p>
+                    <p>Email:{Orders?.email}</p>
+                    <p>Username:{Orders?.username}</p>
+                    <p>Address:{Orders?.address}</p>
 
-                    <button onClick={() => handleDeleteBtn(Orders?._id)} className="btn btn-danger">Delete</button>
+                    <button onClick={() => handleDeleteBtn(Orders?._id)} className="btn btn-danger m-2 mx-auto w-10">Delete</button>
 
                 </div>
                 )
