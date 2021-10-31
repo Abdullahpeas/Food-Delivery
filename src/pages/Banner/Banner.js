@@ -1,14 +1,14 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import banner1 from '../../../src/banner/b2ag.jpg';
-import banner2 from '../../../src/banner/mobile2.jpg';
+import banner1 from '../../../src/banner/mobile2.jpg';
+import banner2 from '../../../src/banner/b2ag.jpg';
 import banner3 from '../../../src/banner/piz2.jpg';
 import './Banner.css';
 
 const Banner = () => {
     return (
         <div>
-            {/* <img height="540px" width="100%" src={banner} alt="" /> */}
+
 
             <Carousel>
                 <Carousel.Item>
@@ -18,7 +18,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3>Order <span className="food-color">Food Online</span></h3>
+                        <h3>Fastest <span className="food-color">Food Delivery</span></h3>
                         <p>Choose,Order and TakeOut</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -30,7 +30,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Order <span className="food-color">Food Online</span></h3>
+                        <h3>Fastest <span className="food-color">Food Delivery</span></h3>
                         <p>Choose,Order and TakeOut</p>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -42,7 +42,7 @@ const Banner = () => {
                     />
 
                     <Carousel.Caption>
-                        <h3>Order <span className="food-color">Food Online</span></h3>
+                        <h3>Fastest <span className="food-color">Food Delivery</span></h3>
                         <p>Choose,Order and TakeOut</p>
                     </Carousel.Caption>
                 </Carousel.Item>

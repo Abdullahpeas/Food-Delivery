@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+
 
 const ServiceDetail = () => {
     const { id } = useParams();
@@ -12,7 +12,6 @@ const ServiceDetail = () => {
 
     const [services, setServices] = useState({});
     const { register, handleSubmit, reset } = useForm();
-
 
 
     useEffect(() => {
@@ -43,7 +42,7 @@ const ServiceDetail = () => {
                 if (result.acknowledged) {
 
                     alert('Successfully Order Processed ')
-
+                    reset()
                 }
 
             })
@@ -65,11 +64,14 @@ const ServiceDetail = () => {
 
                 {services?.desc && <input className="d-flex m-3 mx-auto p-3 " defaultValue={services?.desc} {...register("desc")} />}
 
-                {services?.price && <input className="d-flex m-3 mx-auto" placeholder="price" defaultValue={services?.price} {...register("price")} />}
+                {services?.price && <input className="d-flex m-3 mx-auto" defaultValue={services?.price} {...register("price")} />}
 
                 {user?.displayName && <input className="d-flex m-3 mx-auto" placeholder="username" defaultValue={user?.displayName}{...register("username")} />}
 
-                <input className="d-flex m-3 mx-auto" placeholder="addrress" {...register("address")} />
+                <input required="true" className="d-flex m-3 mx-auto" placeholder="addrress" {...register("address")} />
+
+                <input required="true" className="d-flex m-3 mx-auto" placeholder="phone" {...register("phone")} />
+
 
                 <input className="btn btn-success" type="submit" />
 

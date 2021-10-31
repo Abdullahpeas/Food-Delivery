@@ -12,11 +12,14 @@ import AddServices from './pages/AddServices/AddServices';
 import ManageOrders from './pages/ManageOrders/ManageOrders';
 import Footer from './pages/Footer/Footer';
 import WhyChoose from './pages/WhyChoose/WhyChoose';
+import NotFound from './pages/NotFound/NotFound';
 
 
 function App() {
+
   return (
     <div className="App">
+
       <AuthProvider>
         <Router>
           <Header></Header>
@@ -49,6 +52,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
           <Footer></Footer>

@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import useAuth from '../../hooks/useAuth';
+import './MyOrders.css';
 
 const MyOrders = () => {
     const { user } = useAuth();
@@ -36,7 +37,7 @@ const MyOrders = () => {
     }
 
     return (
-        <div>
+        <div className="section-orders">
             <h2>My order : {orders.length}</h2>
 
             {
@@ -47,6 +48,8 @@ const MyOrders = () => {
                     <p>Email:{order?.email}</p>
                     <p>Username:{order?.username}</p>
                     <p>Address:{order?.address}</p>
+                    <p>Phone:{order?.phone}</p>
+
 
                     <button onClick={() => handleDelete(order._id)} className="btn btn-danger m-2 mx-auto w-10">Cancel Order</button>
                 </div>)

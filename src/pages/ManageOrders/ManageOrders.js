@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import './ManageOrders.css';
 
 const ManageOrders = () => {
     const [manageOrders, setManageOrders] = useState([]);
@@ -29,8 +30,10 @@ const ManageOrders = () => {
             });
 
     };
+
+
     return (
-        <div>
+        <div className="section-manage">
             <h2>All Orders: {manageOrders.length}</h2>
             <hr className="w-25 mx-auto text-success pt-1" />
             {
@@ -42,8 +45,10 @@ const ManageOrders = () => {
                     <p>Email:{Orders?.email}</p>
                     <p>Username:{Orders?.username}</p>
                     <p>Address:{Orders?.address}</p>
+                    <p>Phone:{Orders?.phone}</p>
 
-                    <button onClick={() => handleDeleteBtn(Orders?._id)} className="btn btn-danger m-2 mx-auto w-10">Delete</button>
+                    <button onClick={() => handleDeleteBtn(Orders?._id)} className="btn btn-danger m-2 mx-auto w-10">Delete</button><br />
+
 
                 </div>
                 )

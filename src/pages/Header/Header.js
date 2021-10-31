@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
-
+import logo from '../../../src/logo/favicon.ico'
 
 const Header = () => {
     const { user, logOut } = useAuth();
@@ -11,7 +11,7 @@ const Header = () => {
             <Navbar variant="light" bg="light" collapseOnSelect expand="lg" sticky="top">
                 <Container>
 
-                    <Navbar.Brand >
+                    <Navbar.Brand > <img width="70px" height="50px" src={logo} alt="" />
                     </Navbar.Brand>
 
                     <Navbar.Toggle />

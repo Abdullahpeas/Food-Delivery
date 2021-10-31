@@ -1,6 +1,7 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
+import './Login.css';
 
 
 const Login = () => {
@@ -22,8 +23,8 @@ const Login = () => {
 
     }
     return (
-        <div>
-            <h2> Please Login</h2>
+        <div className="section-login">
+            <h2 className="text-success mt-5"> Please Login</h2>
             <button className="btn btn-warning" onClick={handleGoogleSignIn}>Google Sign In</button>
         </div>
     );
