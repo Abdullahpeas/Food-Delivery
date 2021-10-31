@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [(https://creepy-dracula-98003.herokuapp.com/foods)].
+This project was bootstrapped with [(https://creepy-dracula-98003.herokuapp.com/)].
 
 [(https://food-delivery-b9b25.web.app/home)]
 
