@@ -11,7 +11,7 @@ const Header = () => {
             <Navbar variant="light" bg="light" collapseOnSelect expand="lg" sticky="top">
                 <Container>
 
-                    <Navbar.Brand > <img width="70px" height="50px" src={logo} alt="" />
+                    <Navbar.Brand > <img width="70px" height="70px" src={logo} alt="" />
                     </Navbar.Brand>
 
                     <Navbar.Toggle />

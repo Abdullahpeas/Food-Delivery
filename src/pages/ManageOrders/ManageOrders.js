@@ -31,6 +31,20 @@ const ManageOrders = () => {
 
     };
 
+    const handleApprovedBtn = id => {
+        fetch(`https://creepy-dracula-98003.herokuapp.com/status/${id}`, {
+            method: "PUT",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(manageOrders)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.acknowledged) {
+                    alert('Your Order approved')
+                }
+            })
+    }
+
 
     return (
         <div className="section-manage">
@@ -46,9 +60,11 @@ const ManageOrders = () => {
                     <p>Username:{Orders?.username}</p>
                     <p>Address:{Orders?.address}</p>
                     <p>Phone:{Orders?.phone}</p>
+                    <p>Status:{Orders?.status}</p>
 
                     <button onClick={() => handleDeleteBtn(Orders?._id)} className="btn btn-danger m-2 mx-auto w-10">Delete</button><br />
 
+                    <button onClick={() => handleApprovedBtn(`${Orders?._id}`)} className="btn btn-danger m-2 mx-auto w-10">Approved</button>
 
                 </div>
                 )

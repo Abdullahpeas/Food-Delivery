@@ -28,6 +28,7 @@ const ServiceDetail = () => {
 
 
     const onSubmit = data => {
+        data.status = "Pending";
         const url = `https://creepy-dracula-98003.herokuapp.com/services/${id}`;
         fetch(url, {
             method: "POST",

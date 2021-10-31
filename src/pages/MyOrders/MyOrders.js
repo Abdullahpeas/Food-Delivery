@@ -49,6 +49,7 @@ const MyOrders = () => {
                     <p>Username:{order?.username}</p>
                     <p>Address:{order?.address}</p>
                     <p>Phone:{order?.phone}</p>
+                    <p>Status:{order?.status}</p>
 
 
                     <button onClick={() => handleDelete(order._id)} className="btn btn-danger m-2 mx-auto w-10">Cancel Order</button>
