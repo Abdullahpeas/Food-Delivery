@@ -58,7 +58,7 @@ const ServiceDetail = () => {
 
 
 
-                {user?.email && <input className="d-flex m-3 mx-auto" defaultValue={user?.email} {...register("email", { required: true })} />}
+                {user?.email && <input className="d-flex m-3 mx-auto" defaultValue={user?.email}  {...register("email", { required: true })} />}
 
 
                 {services?.name && <input className="d-flex m-3 mx-auto" defaultValue={services?.name} {...register("Item")} />}
